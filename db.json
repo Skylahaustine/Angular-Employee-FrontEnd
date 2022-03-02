@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "name": "smoothlab2@gmail.com",
+      "email": "smoothlab2@gmail.com",
+      "gender": "smoothlab2@gmail.com",
+      "status": "smoothlab2@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "asdas@gmail.com",
+      "email": "asdas@gmail.com",
+      "gender": "asdas@gmail.com",
+      "status": "asdas@gmail.coma"
+    },
+    {
+      "id": 5,
+      "name": "fdf",
+      "email": "dfd@gmail.com",
+      "gender": "male",
+      "status": "inactive"
+    },
+    {
+      "id": 6,
+      "name": "fdf",
+      "email": "dfd@gmail.com",
+      "gender": "female",
+      "status": "inactive"
+    },
+    {
+      "id": 7,
+      "name": "Austine",
+      "email": "austinemwangideveloper@gmail.com",
+      "gender": "male",
+      "status": "single"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
