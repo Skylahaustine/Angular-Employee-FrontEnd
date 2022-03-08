@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Validators } from '@angular/forms';
 import { ApiService } from '../shared/api.service';
 import { EmployeeModel } from './employee-dashboard.model';
 
@@ -9,8 +10,15 @@ import { EmployeeModel } from './employee-dashboard.model';
   templateUrl: './employee-dashboard.component.html',
   styleUrls: ['./employee-dashboard.component.css']
 })
+
+
+
+
 export class EmployeeDashboardComponent implements OnInit {
   formValue !: FormGroup;
+
+   // totalLength!: number;
+   page : number = 1;
   employeeModelObj: EmployeeModel= new EmployeeModel();
   employeeData!: any;
 
@@ -31,10 +39,10 @@ showUpdate!:boolean;
     this.formValue= this.formbuilber.group(
       {
         id :[''],
-        name :[''],
-        email :[''],
-        gender :[''],
-        status:['']
+        name :['',[Validators.required, Validators.minLength(4), Validators.maxLength(10)]], 
+        email : ['',[Validators.required, Validators.email]],
+        gender :['',Validators.required ],
+        status:['',Validators.required]
 
       })
       this.getallEmployee();
@@ -43,6 +51,10 @@ clickAddEmployee(){
   this.formValue.reset();
   this.showAdd= true;
   this.showUpdate= false;
+}
+
+get f(){
+  return this.formValue.controls
 }
 
   postEmployeeDetails(){
